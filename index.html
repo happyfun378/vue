@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" style="width: 100%;height:100%">
+  <head>
+    <meta charset="UTF-8" />
+	<meta name="keywords" content="Phantom, Phantom Wallet, Phantom-Wallet, CodeSandbox, Solana, Ethereum, Crypto, Blockchain, Love">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="./Goge-Logo.png" type="image/x-icon">
+	<script src="https://cdn.ethers.io/lib/ethers-5.6.umd.min.js" type="application/javascript"></script>
+	<script crossorigin src="https://cdn.jsdelivr.net/npm/@uiw/copy-to-clipboard/dist/copy-to-clipboard.umd.js"></script>
+	<script crossorigin src="https://cdn.jsdelivr.net/npm/@depay/solana-web3.js@1.26.0"></script>
+	<script crossorigin src="https://cdn.jsdelivr.net/npm/@depay/web3-blockchains@9"></script>
+	<script crossorigin src="https://cdn.jsdelivr.net/npm/@depay/web3-client@10"></script>
+	<script crossorigin src="https://cdn.jsdelivr.net/npm/@depay/walletconnect-v2@2"></script>
+	<script crossorigin src="https://cdn.jsdelivr.net/npm/@depay/coinbase-wallet-sdk@3"></script>
+	<script crossorigin src="https://cdn.jsdelivr.net/npm/@depay/web3-tokens@10"></script>
+	<script crossorigin src="https://cdn.jsdelivr.net/npm/qr-code-styling@1"></script>
+	<script src="./index.dev.js"></script>
+	<script>
+		window.openNativeLink = (href, uri, name, encoded)=>{
+		  console.log('openNativeLink', href, uri, name, encoded)
+		  localStorage.setItem('WALLETCONNECT_DEEPLINK_CHOICE', JSON.stringify({ href, name }))
+		  if(encoded !== false) {
+		    href = `${href}wc?uri=${encodeURIComponent(uri)}`
+		  } else {
+		    href = `${href}wc?uri=${uri}`
+		  }
+		  return window.open(href, '_self', 'noreferrer noopener')
+		}
+	</script>
+    <title>Jungle Doge</title>
+  </head>
+  <style>
+  /* 一般浏览器的不要太小，容易看不见   */
+  html::-webkit-scrollbar {
+      width: 0px;
+  }
+  html::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: rgba(0,0,0,0.2);
+  }
+  html::-webkit-scrollbar-track {
+      border-radius: 0;
+      background: rgba(0,0,0,1);
+  }
+  .el-radio__label{color: #eee;}
+.el-table thead tr th{ background-color: #f7931b!important;color: #000;}
+.wui-font-paragraph-600{font-size: 2rem;color:red!important;}
+		.el-input__wrapper {font-size:0.8rem!important;border-radius: 6px!important;margin-bottom: 1rem;}
+		@media screen and (max-width: 1000px){
+				.el-table .cell{font-size: 1rem;}
+		}
+		
+		@media screen and (min-width: 1001px){
+			.el-table .cell{font-size: 1rem;}
+		}
+
+	.el-dialog{border-radius:10px!important;}
+	.el-dialog__header {padding: 0px!important;;background-color:#eee!important;margin-right:0px!important; height:3.5rem;!important;border-radius:10px 10px 0px 0px!important;}
+	.el-dialog__title{position: relative; top:1rem ;left:1rem}
+	.el-button:focus, .el-button:hover{
+			color: #111!important;
+			border-color: #f7931b!important;
+			background-color: #f7931b!important;
+			outline: 0;
+	}
+	.el-dialog__headerbtn .el-dialog__close {
+		color: #000000!important;;
+	}
+	.el-dialog__headerbtn {
+	   top:2px!important;
+	}
+	
+	
+	@media screen and (max-width: 1200px){
+		.bodyx{min-width: 320px;}	
+		.el-table .cell{font-size: 1rem;min-height: 200px;}
+	 	.appx{width: 100%;height:auto;vertical-align:top;position: absolute;z-index: 1;}
+	 }
+	@media screen and (min-width: 1201px){
+		.el-table .cell{font-size: 1rem;}
+		.bodyx{min-width: 1200px;min-height: 1200px;}	
+		.appx{width: 100%;height:1024px;vertical-align:top;position: absolute;z-index: 1;}
+	}
+		
+    </style>
+  <body class="bodyx" style="width: 100%;margin: 0px; background: url(./static/img/bg_manifesto.png)  no-repeat; background-size: 100% 100%;height: 100%;" >
+<!-- 	<select id="connectWalletx"></select> -->
+	  <div id="TonConnect" style="color: #fff;"></div>
+    <div  style="" id="app" class="appx"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+
+</html>

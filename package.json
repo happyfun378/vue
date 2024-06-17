@@ -1,0 +1,60 @@
+{
+  "name": "vitex",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "keywords": [
+    "phantom",
+    "phantom wallet",
+    "phantom-wallet",
+    "codesandbox",
+    "solana",
+    "ethereum",
+    "crypto",
+    "blockchain",
+    "love"
+  ],
+  "scripts": {
+    "dev": "vite  --host ",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@depay/web3-wallets": "^17.1.0",
+    "@depay/web3-wallets-solana": "^17.1.0",
+    "@klinecharts/pro": "^0.1.1",
+    "@metaplex-foundation/js": "^0.20.1",
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/spl-token": "^0.2.0",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.91.8",
+    "@tonconnect/ui": "^2.0.0",
+    "@wagmi/connectors": "^5.0.14",
+    "@wagmi/core": "^2.11.2",
+    "@web3modal/wagmi": "^5.0.1",
+    "axios": "^1.6.0",
+    "bs58": "^5.0.0",
+    "crypto": "^1.0.1",
+    "element-plus": "^2.4.1",
+    "graphql-request": "^7.0.1",
+    "js-md5": "^0.8.3",
+    "solana-wallets-vue": "^0.6.1",
+    "viem": "^2.13.8",
+    "vue": "^3.3.4",
+    "vue-clipboard3": "^2.0.0",
+    "vue-router": "^4.2.5",
+    "web3": "^4.2.1",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "echarts": "^5.4.3",
+    "i": "^0.3.7",
+    "sass": "^1.69.5",
+    "unplugin-auto-import": "^0.16.7",
+    "unplugin-element-plus": "^0.8.0",
+    "unplugin-vue-components": "^0.25.2",
+    "vite": "^4.4.5"
+  }
+}
